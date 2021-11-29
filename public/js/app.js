@@ -1,6 +1,6 @@
-console.log('Client side js')
+console.log('Client side js' + window.location)
 function fetchResult(location) {
-    fetch('http://localhost:5050/weather?location='+location).then(response => {
+    fetch('/weather?location='+location).then(response => {
         response.json().then(body => {
             if (body.error) {
                 message2.textContent = body.error;
